@@ -1,0 +1,49 @@
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+
+}
+
+p {
+    color: hsl(212, 21%, 14%);
+    
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.card-text:first-child {
+
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.card {
+    width: 92vw;
+    margin: 2em auto;
+    /* width: 95vw;
+    margin: 2em auto; */
+    
+    background-color: white ;
+    border-radius: 1em;
+    
+}
+
+.card-text {
+    padding: 1.2em
+}
