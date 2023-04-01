@@ -8,42 +8,171 @@ font-family: 'Montserrat', sans-serif; */
     padding: 0;
 }
 
-body {
-    background-color: hsl(30, 38%, 92%);
-
+:root {
+    --fa-font-solid: 900;
 }
 
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+h1 {
+    margin: .3em 0;
+    font-family: 'Fraunces', serif;
+}
+
+br:last-of-type {
+    display: none;
+}
+
+
 p {
-    color: hsl(212, 21%, 14%);
+    color: hsl(228, 12%, 48%);
     
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-}
 
-.card-text:first-child {
-
-    text-transform: uppercase;
+    line-height: 1.4;
 }
 
 img {
     width: 100%;
+    display: block;
 
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
 }
 
+button {
+    width: 100%;
+    padding: 1.2em;
+
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    
+    font-family: 'Montserrat', sans-serif;
+    
+    border: none;
+    border-radius: .5em;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 25%);
+
+}
+
 .card {
     width: 92vw;
+    max-width: 1080px;
     margin: 2em auto;
-    /* width: 95vw;
-    margin: 2em auto; */
     
     background-color: white ;
-    border-radius: 1em;
-    
+    border-radius: 1em;    
+}
+
+.desktop-img {
+    display: none;
 }
 
 .card-text {
-    padding: 1.2em
+    padding: 1.5em
+}
+
+.card-text p:first-child {
+    text-transform: uppercase;
+    letter-spacing: .3em;
+}
+
+.price {
+    margin: 1em 0 1em;
+    
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price span:first-child {
+    color: hsl(158, 36%, 37%);
+
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+}
+
+.price span:last-child {
+    color: hsl(228, 12%, 48%);
+
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    
+    text-decoration: line-through;
+}
+
+.icon::before {
+    /* using style CSS custom property */
+    font: var(--fa-font-solid);
+    content: "\f07a";
+}
+
+
+@media (min-width: 900px) {
+    .desktop {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    br:first-of-type {
+        display: none;
+    }
+
+    br:last-of-type {
+        display: block;
+    }
+
+    p {
+        color: hsl(228, 12%, 48%);
+        
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    
+        line-height: 2;
+    }
+
+    img {
+        border-top-right-radius: 0;
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+    }
+
+    .card {
+        display: flex;
+    }
+    
+    .card-img, .card-text {
+        width: 50%
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+    }
+
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
